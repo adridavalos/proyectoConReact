@@ -1,9 +1,14 @@
+import { NavBar } from "./components/layout/NavBar"
+import ItemListContainer from "./components/pages/ItemListContainer"
 
 
 const App = ()=>{
 
   return (
-    < div>Adri</div>
+    < div>
+      <NavBar/>
+      <ItemListContainer greeting = "Aca va el contenido"/>
+    </div>
   )
 }
 
