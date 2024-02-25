@@ -1,14 +1,30 @@
-import { NavBar } from "./components/layout/NavBar"
-import ItemListContainer from "./components/pages/ItemListContainer"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { NavBarContainer } from "./components/layout/navBar/NavBarContainer"
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer"
+import { Cart } from "./components/common"
+import { ItemDetailContainer } from "./components/pages"
+import { Count } from "./components/common/count/count"
 
 
-const App = ()=>{
+
+
+const App = () => {
 
   return (
-    < div>
-      <NavBar/>
-      <ItemListContainer greeting = "Aca va el contenido"/>
-    </div>
+    <>
+
+      <BrowserRouter>
+        <NavBarContainer />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+
+    </>
   )
 }
 
