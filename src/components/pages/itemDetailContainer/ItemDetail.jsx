@@ -1,22 +1,3 @@
-// import { ProductCard } from "../../common"
-// import Grid from '@mui/material/Grid';
-
-// export const ItemDetail = ({ id, img, title, description, price }) => {
-//     console.log(id);
-//     return (
-//         <>
-//             <Grid key={id} item>
-//                 <ProductCard
-//                     id={id}
-//                     img={img}
-//                     title={title}
-//                     description={description}
-//                     price={price} />
-//             </Grid>
-//         </>
-//     )
-// }
-
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Grid, Button } from '@mui/material';
 import { Count } from '../../common/count/count';

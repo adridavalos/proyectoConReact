@@ -63,24 +63,13 @@ const NavBar = () => {
                                 </MenuItem>
                             }
                         </Box>
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {
                                 <MenuItem
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     <Link to="/category/accesorio" style={{ textDecoration: 'none', color: 'black' }}>
                                         Accesorios
-                                    </Link>
-                                </MenuItem>
-                            }
-                        </Box>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {
-                                <MenuItem
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                >
-                                    <Link style={{ textDecoration: 'none', color: 'black' }}>
-                                        Redes Sociales
                                     </Link>
                                 </MenuItem>
                             }
