@@ -1,8 +1,13 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Grid, Button } from '@mui/material';
 import { Count } from '../../common/count/count';
+import { useCount } from "../../../hooks/useCount"
 
-export const ItemDetail = ({ id, img, title, description, price, stock, onAdd, inicial }) => {
+export const ItemDetail = ({ id, img, title, description, price, stock, onAdd, inicial = 1 }) => {
+
+    const { count, increment, decrement } = useCount(inicial)
+
+
     return (
         <Grid container justifyContent="center">
             <Grid item xs={8}>
@@ -23,7 +28,15 @@ export const ItemDetail = ({ id, img, title, description, price, stock, onAdd, i
                         <Typography variant="h5" component="div" sx={{ marginTop: 2, fontWeight: 'bold' }}>
                             ${price}
                         </Typography>
-                        <Count onAdd={onAdd} stock={stock} inicial={inicial} />
+                        <Count stock={stock} inicial={inicial} increment={increment} decrement={decrement} count={count} />
+                        <Grid container direction="row" alignItems="center" justifyContent="center">
+                            <Grid item>
+                                <Button variant="contained" color="primary" sx={{ marginTop: 2 }} onClick={() => { onAdd(count) }}>
+                                    Añadir al carrito
+                                </Button>
+                            </Grid>
+                        </Grid>
+
                     </CardContent>
                 </Card>
 

@@ -1,13 +1,19 @@
 import { Button, Card, CardContent, CardMedia, Grid, Typography, IconButton } from "@mui/material"
-import { CartContext } from "../../../context/CartContext"
-import { useContext } from "react"
 import { useCount } from "../../../hooks/useCount"
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import { useEffect } from 'react';
 
-export const CartDetail = ({ id, img, title, description, price, cantidad, stock }) => {
-    const { removeById } = useContext(CartContext)
+
+export const CartDetail = ({ item, addToCart, removeById }) => {
+    const { id, img, title, description, price, cantidad, stock } = item
     const { count, increment, decrement } = useCount(cantidad)
+
+    useEffect(() => {
+        addToCart({ ...item, cantidad: count })
+    }, [count])
+
+
     return (
         <>
             <Grid container
@@ -17,7 +23,7 @@ export const CartDetail = ({ id, img, title, description, price, cantidad, stock
                 <Card sx={{ display: 'flex', marginTop: 4, width: '80%' }}>
                     <CardMedia
                         component="img"
-                        sx={{ width: '20%', height: '5%', objectFit: 'cover' }}
+                        sx={{ width: '30%', height: 200, objectFit: 'cover' }}
                         image={img}
                         alt="Imagen del producto seleccionado"
                     />
@@ -30,7 +36,7 @@ export const CartDetail = ({ id, img, title, description, price, cantidad, stock
                         </Typography>
                         <Grid container direction="row" alignItems="center" spacing={1}>
                             <Grid item>
-                                <IconButton onClick={decrement} sx={{ color: 'black', fontSize: '1rem' }}>
+                                <IconButton onClick={() => { decrement(stock) }} sx={{ color: 'black', fontSize: '1rem' }}>
                                     <RemoveIcon />
                                 </IconButton>
                             </Grid>
@@ -40,7 +46,7 @@ export const CartDetail = ({ id, img, title, description, price, cantidad, stock
                                 </Typography>
                             </Grid>
                             <Grid item>
-                                <IconButton onClick={() => { increment(stock), onAdd(count) }} sx={{ color: 'black', fontSize: '1rem' }}>
+                                <IconButton onClick={() => increment(stock)} sx={{ color: 'black', fontSize: '1rem' }}>
                                     <AddIcon />
                                 </IconButton>
                             </Grid>
@@ -64,7 +70,7 @@ export const CartDetail = ({ id, img, title, description, price, cantidad, stock
                         </Button>
                     </CardContent>
                 </Card>
-            </Grid>
+            </Grid >
         </>
 
     )

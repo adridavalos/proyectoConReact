@@ -4,7 +4,10 @@ import { CartResumen } from "../../common/CartResumen";
 import Swal from "sweetalert2";
 
 
-export const Cart = ({ cart, clearCart }) => {
+
+
+export const Cart = ({ cart, addToCart, clearCart, removeById }) => {
+
     const limpiarConAlerta = () => {
         Swal.fire({
             title: "¿Seguro quieres vaciar el carrito?",
@@ -27,19 +30,13 @@ export const Cart = ({ cart, clearCart }) => {
         <Grid container>
             <Grid item xs={8} sx={{ paddingRight: 2 }}>
                 {
-                    cart.map(({ id, img, title, description, price, cantidad, stock }) => {
-                        return (
-                            <div key={id}>
-                                <CartDetail
-                                    id={id}
-                                    img={img}
-                                    title={title}
-                                    description={description}
-                                    price={price}
-                                    cantidad={cantidad}
-                                    stock={stock} />
-                            </div>
-                        )
+                    cart.map(item => {
+                        return <CartDetail
+                            key={item.id}
+                            item={item}
+                            addToCart={addToCart}
+                            removeById={removeById}
+                        />
                     })
                 }
             </Grid>

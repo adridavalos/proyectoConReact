@@ -1,12 +1,11 @@
-import { useContext } from "react"
-import { CartContext } from "../../../context/CartContext"
 import { Cart } from "./Cart"
 import { FiShoppingBag } from 'react-icons/fi';
-
+import { CartContext } from "../../../context/CartContext"
+import { useContext } from "react"
 
 export const CartContainer = () => {
-    const { cart, clearCart } = useContext(CartContext)
 
+    const { clearCart, addToCart, removeById, cart } = useContext(CartContext)
 
     return (
         <>
@@ -16,7 +15,7 @@ export const CartContainer = () => {
                     <h1>Carrito Vacío</h1>
                 </div>
             ) : (
-                <Cart cart={cart} clearCart={clearCart} />
+                <Cart cart={cart} clearCart={clearCart} addToCart={addToCart} removeById={removeById} />
             )}
 
         </>

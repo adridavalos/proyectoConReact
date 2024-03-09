@@ -22,8 +22,7 @@ export const ItemDetailContainer = () => {
     }, [id])
     const onAdd = (cantidad) => {
 
-        let infoproducto = { ...item, cantidad };
-        addToCart(infoproducto);
+        addToCart({ ...item, cantidad });
 
         Swal.fire({
             position: "center",
