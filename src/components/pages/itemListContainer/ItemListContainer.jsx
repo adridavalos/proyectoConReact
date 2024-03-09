@@ -12,7 +12,6 @@ const ItemListContainer = () => {
   const { category } = useParams();
   const [product, setProduct] = useState([])
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     setIsLoading(true);
     getProducts()
@@ -28,11 +27,12 @@ const ItemListContainer = () => {
       })
 
   }, [category])
+  if (isLoading) {
+    return <Loading />
+  }
   return (
     <>
-      {
-        isLoading ? <Loading /> : <ItemList items={product} />
-      }
+      <ItemList items={product} />
     </>
   )
 }

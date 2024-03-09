@@ -13,7 +13,7 @@ let products = [
     id: 2,
     title: "Body",
     price: 8000,
-    stock: 5,
+    stock: 6,
     description:
       "Body de Manga Corta para Bebas: Frescura y Comodidad en Cada Movimiento",
     categories: ["bebas"],
@@ -23,7 +23,7 @@ let products = [
     id: 3,
     title: "Botitas de Hilo",
     price: 19000,
-    stock: 5,
+    stock: 8,
     description:
       "Botitas de Hilo para Bebas: Estilo y Comodidad para sus Pequeños Pies",
     categories: ["accesorio", "bebas"],
@@ -33,7 +33,7 @@ let products = [
     id: 4,
     title: "Kit",
     price: 35000,
-    stock: 5,
+    stock: 6,
     description:
       "Un kit de 4 productos: mamadera, osito, un par de medias y un chupete ",
     categories: ["accesorio", "bebes", "bebas"],
@@ -43,7 +43,7 @@ let products = [
     id: 5,
     title: "Medias",
     price: 6000,
-    stock: 5,
+    stock: 8,
     description: "Medias de algodón para Bebas: Suaves y super abrigadas",
     categories: ["accesorio", "bebas"],
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367943/lindos-calcetines-lana_hgui1p.jpg",
@@ -62,7 +62,7 @@ let products = [
     id: 7,
     title: "Gorra de Algodón",
     price: 9000,
-    stock: 5,
+    stock: 3,
     description:
       "Gorrito de Algodón para Bebas: Suavidad y Comodidad para Mantenerlos Abrigados",
     categories: ["accesorio", "bebas"],

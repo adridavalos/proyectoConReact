@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Grid, Button } from '@mui/material';
 import { Count } from '../../common/count/count';
 
-export const ItemDetail = ({ id, img, title, description, price }) => {
+export const ItemDetail = ({ id, img, title, description, price, stock, onAdd, inicial }) => {
     return (
         <Grid container justifyContent="center">
             <Grid item xs={8}>
@@ -23,10 +23,7 @@ export const ItemDetail = ({ id, img, title, description, price }) => {
                         <Typography variant="h5" component="div" sx={{ marginTop: 2, fontWeight: 'bold' }}>
                             ${price}
                         </Typography>
-                        <Count />
-                        <Button variant="contained" color="primary" sx={{ marginLeft: 2, marginTop: 4 }}>
-                            Añadir al carrito
-                        </Button>
+                        <Count onAdd={onAdd} stock={stock} inicial={inicial} />
                     </CardContent>
                 </Card>
 

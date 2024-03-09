@@ -3,17 +3,15 @@ import * as React from 'react';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
-
-import style from './ProductCard.module.css';
 import { Link } from 'react-router-dom';
 
 
 export const ProductCard = ({ id, img, title, description, price }) => {
 
     return (
-        <div className={style.contenedor}>
+        <Grid item sx={{ paddingLeft: 6, paddingTop: 4 }}>
             <Card sx={{ maxWidth: 400 }}>
                 <Link to={`/item/${id}`} style={{ textDecoration: 'none', color: 'black' }} >
                     <CardActionArea>
@@ -37,7 +35,7 @@ export const ProductCard = ({ id, img, title, description, price }) => {
                     </CardActionArea>
                 </Link>
             </Card>
-        </div>
+        </Grid>
     )
 }
 

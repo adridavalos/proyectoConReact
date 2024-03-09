@@ -17,16 +17,16 @@ const NavBar = () => {
                     <Toolbar disableGutters>
                         <Avatar
                             alt="Logo de la empresa"
-                            component="a"
-                            href="/"
+                            component={Link}
+                            to={"/"}
                             src="https://res.cloudinary.com/dg9fx8njd/image/upload/v1706976810/WhatsApp_Image_2024-02-03_at_13.05.08_g7j98f.jpg"
                             style={{ width: 100, height: 100 }}
                         />
                         <Typography
                             variant="h6"
                             noWrap
-                            component="a"
-                            href="/"
+                            component={Link}
+                            to={"/"}
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -75,7 +75,7 @@ const NavBar = () => {
                             }
                         </Box>
                         <Link to="/cart">
-                            <CartWidget cantidad={3} />
+                            <CartWidget />
                         </Link>
 
                     </Toolbar>

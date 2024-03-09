@@ -5,7 +5,8 @@ export const ItemList = ({ items }) => {
     return <Grid
         container
         direction="row"
-        justifyContent="space-around">
+        justifyContent="flex-start"
+        alignItems="center">
         {
             items.map(({ id, img, title, description, price }) => {
                 return (
