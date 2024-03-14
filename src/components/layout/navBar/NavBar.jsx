@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 import { CartWidget } from "../../common"
 import { Link } from "react-router-dom"
+import { menuNavegation } from "../../../router/menuNavegation";
 CartWidget
 const NavBar = () => {
     return (
@@ -42,37 +43,15 @@ const NavBar = () => {
                             LITTLE BUNNY
                         </Typography>
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            {
-                                <MenuItem
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                >
-                                    <Link to="/category/bebas" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Bebas
-                                    </Link>
-                                </MenuItem>
-                            }
-                        </Box>
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            {
-                                <MenuItem
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                >
-                                    <Link to="/category/bebes" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Bebes
-                                    </Link>
-                                </MenuItem>
-                            }
-                        </Box>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {
-                                <MenuItem
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                >
-                                    <Link to="/category/accesorio" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Accesorios
-                                    </Link>
-                                </MenuItem>
-                            }
+                            <MenuItem >
+                                {
+                                    menuNavegation.map(({ id, text, path }) => (
+                                        <Link key={id} to={path} style={{ textDecoration: 'none', color: 'black', paddingRight: 50, fontSize: '1.2rem' }}>
+                                            {text}
+                                        </Link>
+                                    ))
+                                }
+                            </MenuItem>
                         </Box>
                         <Link to="/cart">
                             <CartWidget />

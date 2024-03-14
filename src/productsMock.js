@@ -1,16 +1,5 @@
-let products = [
+export let products = [
   {
-    id: 1,
-    title: "Suéter de Hilo",
-    price: 15000,
-    description:
-      "Suéter de Hilo Unisex para Bebé: Elegancia y Comodidad en Miniatura",
-    img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367943/ropa-bebe-punto-accesorios-sobre-fondo-azul_xaou6b.jpg",
-    stock: 5,
-    categories: ["bebas", "bebes"],
-  },
-  {
-    id: 2,
     title: "Body",
     price: 8000,
     stock: 6,
@@ -20,7 +9,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367943/onesie-bebe-rosa-sobre-fondo-rosa_oygfm0.jpg",
   },
   {
-    id: 3,
     title: "Botitas de Hilo",
     price: 19000,
     stock: 8,
@@ -30,7 +18,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708368638/botines-nina-sobre-fondo-rosa-copiar-espacio_xcklzl.jpg",
   },
   {
-    id: 4,
     title: "Kit",
     price: 35000,
     stock: 6,
@@ -40,7 +27,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367942/articulos-bebe-azul-claro_qgtmnq.jpg",
   },
   {
-    id: 5,
     title: "Medias",
     price: 6000,
     stock: 8,
@@ -49,7 +35,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367943/lindos-calcetines-lana_hgui1p.jpg",
   },
   {
-    id: 6,
     title: "Pijamas",
     price: 17800,
     stock: 5,
@@ -59,7 +44,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367943/concepto-bebe-nino-pizarra_zfnwyn.jpg",
   },
   {
-    id: 7,
     title: "Gorra de Algodón",
     price: 9000,
     stock: 3,
@@ -69,7 +53,6 @@ let products = [
     img: "https://res.cloudinary.com/dg9fx8njd/image/upload/v1708367942/bebe-elementson-rosa_eqtmbe.jpg",
   },
   {
-    id: 8,
     title: "Suéter + Muñeco",
     price: 25000,
     stock: 5,

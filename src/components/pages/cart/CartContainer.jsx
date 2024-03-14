@@ -5,7 +5,7 @@ import { useContext } from "react"
 
 export const CartContainer = () => {
 
-    const { clearCart, addToCart, removeById, cart } = useContext(CartContext)
+    const { addToCart, removeById, cart } = useContext(CartContext)
 
     return (
         <>
@@ -15,7 +15,7 @@ export const CartContainer = () => {
                     <h1>Carrito Vacío</h1>
                 </div>
             ) : (
-                <Cart cart={cart} clearCart={clearCart} addToCart={addToCart} removeById={removeById} />
+                <Cart cart={cart} addToCart={addToCart} removeById={removeById} />
             )}
 
         </>

@@ -11,7 +11,7 @@ export const CartDetail = ({ item, addToCart, removeById }) => {
 
     useEffect(() => {
         addToCart({ ...item, cantidad: count })
-    }, [count])
+    }, [count]);
 
 
     return (
@@ -34,7 +34,7 @@ export const CartDetail = ({ item, addToCart, removeById }) => {
                         <Typography variant="body1" style={{ fontSize: '0.8rem' }}>
                             {description}
                         </Typography>
-                        <Grid container direction="row" alignItems="center" spacing={1}>
+                        <Grid container direction="row" alignItems="center" spacing={1} sx={{ display: 'flex', marginTop: 1 }}>
                             <Grid item>
                                 <IconButton onClick={() => { decrement(stock) }} sx={{ color: 'black', fontSize: '1rem' }}>
                                     <RemoveIcon />
@@ -50,10 +50,15 @@ export const CartDetail = ({ item, addToCart, removeById }) => {
                                     <AddIcon />
                                 </IconButton>
                             </Grid>
+                            <Typography variant="h5" sx={{ marginTop: 1, paddingRight: 18, paddingLeft: 18, fontSize: '1rem' }}>
+                                ${price}
+                            </Typography>
+                            <Typography variant="h5" sx={{ marginTop: 1, fontSize: '1rem' }}>
+                                ${price * cantidad}
+                            </Typography>
                         </Grid>
-                        <Typography variant="h5" component="div" sx={{ marginTop: 2, fontSize: '1rem' }}>
-                            ${price}
-                        </Typography>
+
+
                         <Button onClick={() => removeById(id)}
                             sx={{
 
