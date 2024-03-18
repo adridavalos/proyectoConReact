@@ -2,9 +2,7 @@
 
 Little Bunny es una aplicación web para comprar ropa de bebé de forma fácil y rápida. Permite a los usuarios explorar una variedad de productos y agregarlos al carrito de compras de manera intuitiva.
 
-![](https://res.cloudinary.com/dg9fx8njd/image/upload/v1706976810/WhatsApp_Image_2024-02-03_at_13.05.08_g7j98f.jpg)
-
-![]
+![](https://res.cloudinary.com/dg9fx8njd/image/upload/v1706976810/WhatsApp_Image_2024-02-03_at_13.05.08_g7j98f.jpg)![]
 
 ## Tecnologías Utilizadas
 
